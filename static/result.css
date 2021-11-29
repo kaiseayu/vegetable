@@ -1,0 +1,397 @@
+@charset 'UTF-8';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 共通部分 */
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: serif;
+    line-height: 1.7;
+}
+
+img {
+    border: none;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* header */
+.big-bg {
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+.logo {
+    width: 210px;
+    margin-top: 14px;
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+.main-nav {
+    display: flex;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin-top: 34px;
+    list-style: none;
+}
+
+.main-nav li {
+    margin-left: 36px;
+    position: relative;
+    z-index: 1;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+.main-nav a::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: white;
+    transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.main-nav a:hover::after {
+    width: 100%;
+}
+
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+.page-title {
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-weight: normal;
+    position: relative;
+    z-index: 1;
+}
+
+/* about */
+#about {
+    background-image: url('./carrots.jpg');
+    height: 270px;
+    margin-bottom: 40px;
+    color: white;
+}
+
+#about .page-title {
+    text-align: center;
+}
+
+.first-block {
+    display: flex;
+    align-items: center;
+    gap: 0 40px;
+    margin: 40px 0;
+}
+
+.first-block img {
+    margin-top: 50px;
+    width: 40%;
+    height: 40%;
+}
+
+.post-title {
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 50px;
+}
+
+.about-contents p {
+    margin-bottom: 30px;
+}
+
+h3 {
+    margin-top: 60px;
+    margin-bottom: 15px;
+}
+
+.btn01 a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 240px;
+    height: 40px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+
+    background-color: black;
+    border: 1px solid transparent;
+
+    /* margin-left: 30%; */
+}
+
+.btn01 a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 1px;
+    background-color: white;
+}
+   
+.btn01 a::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.btn01 a:hover {
+    background-color: black;
+    border: 1px solid white;
+}
+
+.btn01 a:hover::before {
+    background-color: black;
+}
+   
+.btn01 a:hover::after {
+    border: 1px solid black;
+}
+
+
+/* title */
+#result {
+    background-image: url('./salad-gef5e524a5_1920.jpg');
+    height: 270px;
+    margin-bottom: 40px;
+    color: white;
+}
+
+#result .page-title {
+    text-align: center;
+}
+
+#result p {
+    text-align: center;
+}
+
+/* レシピ */
+.grid {
+    /* width: 80%; */
+    display: grid;
+    /* gap: 26px; */
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 6%;
+    margin-bottom: 50px;
+    /* margin-left: 5%; */
+    /* justify-content: center; */
+}
+
+.list {
+    position: relative;
+    height: 270px;
+    width: 70%;
+    border-radius: 0px;
+    box-shadow: 0px 2px 5px rgb(0 0 0 / 20%);
+    background: #FFF;
+    /* padding: 1.5%; */
+    margin-left: auto;
+    margin-right: auto;
+    list-style: none;
+}
+
+figure {
+    /* display: block; */
+    /* margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px; */
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+} 
+
+.list li {
+    /* display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px; */
+    margin: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.list a {
+    color: black;
+}
+
+.list a:hover {
+    text-decoration: none;
+}
+
+/* 栄養素 */
+/* .secound-block {
+    text-align: center;
+} */
+
+.nutrition-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.nutrition-title {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 7%;
+    margin-bottom: 2%;
+}
+
+.nutrition {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 5%;
+}
+
+.nutrition-name {
+    display: block;
+    margin-bottom: 5%;
+}
+.nutrition-name span {
+    display: block;
+    margin-bottom: 1.5%;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.user-upload {
+    max-height: 300px;
+    max-width: 300px;
+    object-fit: contain;
+}
+
+.predict_name {
+    font-family: serif;
+} 
+
+.return {
+    /* display: flex;
+    text-align: center; */
+    margin: 70px auto;
+    width: 135px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
+    padding: 5px 9px;
+    /* display: inline-block; */
+    font-weight: 400;
+    box-shadow: 0px 2px 2px rgb(0, 0, 0, 0.3);
+    transform: scale(1.25, 1.25);
+}
+
+.return a {
+    margin: 0 auto;
+    text-decoration: none;
+    color: white;
+}
+
+.return:hover {
+    box-shadow: none;
+    opacity: 0.5;
+    /* border: 1px solid rgb(69, 102, 74); */
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+    position: relative;
+    top: 2px;
+    /* left: 3px; */
+} 
+
+
+/* title */
+#word-result {
+    background-image: url('./green-onions.jpg');
+    height: 270px;
+    margin-bottom: 40px;
+    color: white;
+}
+
+#word-result .page-title {
+    text-align: center;
+}
+
+#word-result p {
+    text-align: center;
+}
+
+/* word */
+
+.word {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 5%;
+} 
+
+/* .word-name {
+    display: block;
+    margin-bottom: 5%;
+}  */
+
+.word-name span {
+    display: block;
+    margin-bottom: 1.5%;
+    font-weight: bold;
+    font-size: 30px;
+} 
+
+.word-name img {
+    width: 70%;
+    height: 70%;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    background: rgb(241, 241, 241);
+    text-align: center;
+    padding: 26px 0;
+    margin-top: 50px;
+    }
+    
+footer p {
+    color: rgb(61, 61, 61);
+    font-size: 0.875rem;
+    } 
