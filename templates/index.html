@@ -4,32 +4,113 @@
     <title>ベジゼロ</title>
     <meta charset="utf-8"/>
     <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
-    <link rel='stylesheet' href='../static/index.css'>
+    <link rel='stylesheet' href='../static/result.css'>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div id='home' class='big-bg'>
-        <header class='page-header wrapper'>
-            <h1 class='logo'>ベジゼロ</h1>
+        <header class='page-header-home'>
+            <h1 class='logo'>
+                <a href='/'>
+                <img src='../static/S__44130316.jpg' width="70" height="30">
+                <!-- ベジゼロ -->
+                </a>
+            </h1>
             <nav>
                 <ul class='main-nav'>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
+                    <!-- <li><a href="/">Home</a></li> -->
+                    <li><a href="#about">About</a></li>
                     <li><a href="/recipe">レシピ検索</a></li>
                     <li><a href='/word'>取り組み紹介</a></li>
                 </ul>
             </nav>
         </header>
 
-        <div class='home-content wrapper'>
-            <h2 class='page-title'>捨てられる野菜に、光を。</h2>
-            <br>
-            <br>
-            <div class='home-content-text'>
-                <p>現在、食品廃棄量の増加は世界的な問題となっています。<br>日本では年間約2800万トン、世界では年間約13億トンも廃棄されており、<br>その中にはまだ食べられたはずの食品も多く含まれます。</p>
-                <p>少しでも食品廃棄を減らすために、今日からできることを始めてみませんか。</p>
+        <div class='home-content'>
+            <div class='home-content-main'>
+                <h2 class='home-page-title'>捨てられる野菜たちに、光を。</h2>
+                <br>
+                <br>
+                <!-- <div class='home-content-text'>
+                    <p>現在、食品廃棄量の増加は世界的な問題となっています。<br>日本では年間約2800万トン、世界では年間約13億トンも廃棄されており、<br>その中にはまだ食べられたはずの食品も多く含まれます。</p>
+                    <p>少しでも食品廃棄を減らすために、今日からできることを始めてみませんか。</p>
+                </div> -->
             </div>
         </div>
+
+        <div class='home-content-text'>
+            <p>現在、食品廃棄量の増加は世界的な問題となっています。<br><br>
+                日本では年間約2800万トン、世界では年間約13億トンも廃棄されており、<br>
+                その中にはまだ食べられたはずの食品も多く含まれます。<br><br>
+                少しでも食品廃棄を減らすために、今日からできることを始めてみませんか。</p>
+        </div>
     </div><!-- #home -->
+
+
+
+
+    <div class='about-page'>
+        <div id='about'>
+            <div class='wrapper'>
+                <h2 class='page-title'>About</h2>
+            </div><!-- wrapper -->
+        </div>
+
+        <div class='about-contents wrapper'>
+            <article>
+                <header class='post-info'>
+                    <h2 class='post-title'>農家さんが丹精込めて作った野菜たちが<br>捨てられていくところを見たくない。<br>
+                        <br>
+                        野菜の新たな可能性を知ってもらいたい。<br>野菜の廃棄をゼロにしたい。<br>
+                        <br>
+                        そんな思いでこの「ベジゼロ」を作りました。<br>
+                    </h2>
+                </header>
+                <div class='first-block'>
+                    <div>
+                        <h3>家庭からの廃棄― 野菜くず</h3>
+                        <p>野菜を調理する際、皮などはむいて捨ててしまうことが多いです。<br>
+                            これらは「捨てる部分」と認識している方も多いのではないでしょうか。<br>
+                            しかし、皮まで食べられる野菜は意外と身近に存在しているのです。<br>
+                            また、そこには栄養がたっぷりと含まれています。<br>
+                            <br>
+                            ベジゼロでは、普段捨てられがちな部分、<br>「野菜くず」を美味しく食べることができるレシピを、<br>
+                            含まれている栄養素ととともに紹介します。
+                        </p>
+                        <div class='btn01'>
+                            <a href='/recipe'>レシピ検索へ</a>
+                        </div>
+                    </div>
+                    <img src='../static/725616_l.jpg'>
+                </div>
+            
+                <div class='first-block'>
+                    <img src='../static/3741339_m.jpg'>
+                    <div>
+                        <h3>畑からの廃棄― 規格外野菜</h3>
+                        <p>
+                            規格外野菜とは、<br>「大きさや色、形などが規格に適合しない野菜」のことを指します。<br>
+                            食味や栄養価に差がないにもかかわらず、<br>定められた規格に合っていないという理由で取引されていないのです。<br>
+                            一部はカット野菜やジュース、加工食品として流通することもありますが、<br>
+                            その多くは出荷されずに廃棄処分されています。<br>
+                            <br>
+                            ここでは、そうした「規格外野菜の廃棄」をなくすための<br>様々な企業の取り組みを紹介します。
+                        </p>
+                        <div class='btn01'>
+                            <a href='/word'>取り組み紹介へ</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div><!--news-contents -->
+    </div>
+
+    <footer>
+        <div class='wrapper'>
+            <small>&copy; 2021 A.KAISE</small>
+        </div>
+    </footer>
 </body>
 </html>

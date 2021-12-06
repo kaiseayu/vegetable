@@ -32,8 +32,9 @@ def mainpage():
     return render_template('recipe.html')
 
 @app.route('/word')
-def word():
-    return render_template('word.html')
+def word_result():
+    number = random.randint(0,3)
+    return render_template('word.html', number=number)
 
 @app.route('/upload', methods=['GET', 'POST'])
 def uploads_file():
@@ -71,11 +72,6 @@ def result(upload_number):
         url_list = get_recipe.url_list,
         name_list = get_recipe.recipe_name_list,
         img_list = get_recipe.recipe_img_list)
-
-@app.route('/word_result')
-def word_result():
-    number = random.randint(0,3)
-    return render_template('word_result.html', number=number)
 
 if __name__ == "__main__": 
     app.run(host='0.0.0.0', port=5000)

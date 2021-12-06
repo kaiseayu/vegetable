@@ -4,41 +4,60 @@
     <title>ベジゼロ - レシピ検索</title>
     <meta charset="utf-8"/>
     <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
-    <link rel='stylesheet' href='../static/index.css'>
+    <link rel='stylesheet' href='../static/result.css'>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
     
 <body>
     <div id='recipe' class='big-bg'>
-        <header class='page-header wrapper'>
-            <h1 class='logo'>ベジゼロ</h1>
+        <header class='page-header'>
+            <h1 class='logo'>
+                <a href='/'>
+                <img src='../static/S__44130316.jpg' width="70" height="30">
+                <!-- ベジゼロ -->
+                </a>
+            </h1>
             <nav>
                 <ul class='main-nav'>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
+                    <!-- <li><a href="/">Home</a></li> -->
+                    <li><a href="/#about">About</a></li>
                     <li><a href="/recipe">レシピ検索</a></li>
                     <li><a href="/word">取り組み紹介</a></li>
                 </ul>
             </nav>
         </header>
 
-        <div class='wrapper'>
-            <h2 class='page-title'>レシピ検索</h2>  
+        <div class='page-title wrapper'>
+            <h2>レシピ検索</h2>  
         </div><!-- wrapper-->
+    </div>
+
+    <div class="cp_breadcrumb">
+        <ul class="breadcrumbs">
+        <li><a href="/">Home</a></li>
+        <li>レシピ検索</li>
+        </ul>
     </div>
 
     <div class='recipe-contents wrapper'>
         <header class='post-info'>
             <h2 class='post-title'>あなたが選択した野菜の、<br>「野菜くず」を使用したレシピを提案します。</h2>
         </header>
+        <div class= recipe-img-contents>
+            <img src='../static/pizza-g3dfa868e4_1920.jpg'>
+            <img src='../static/soup-gc63fa17fb_1920.jpg'>
+            <img src='../static/broccoli-g399587fcf_1920.jpg'>
+        </div>
         <div class='recipe-main-contents'>
-            <h3>画像を送信してください。</h3>
+            <h2 class='post-title'>画像を送信してください。</h2>
             <form action="/upload" method="post" enctype="multipart/form-data">
                 <div class='custom-file'>
                     <label>
                         <span class='filelabel' title="ファイルを選択">
-                            <!-- <img src='../static/camera.jpg' width='32' height="32"> -->
-                            Upload
+                            <img src='../static/camera3.png' width='25' height="25">
+                            選択
                         </span>
                         <input type="file" id='upload_file' name='upload_file' multiple='multiple'>
                     </label>
@@ -52,8 +71,8 @@
                 <div class='custom-file-submit'>
                     <label>
                         <span class='filelabel' title='送信'>
-                            <!-- <img src='../static/submit.jpg' width="32" height="32"> -->
-                            Submit
+                            <img src='../static/submit2.png' width="21" height="21">
+                            送信
                         </span>
                         <input type="submit" id="upload_file_submit" value='sumbit'>
                     </label>

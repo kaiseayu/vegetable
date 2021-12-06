@@ -5,47 +5,70 @@
     <meta charset="utf-8"/>
     <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
     <link rel='stylesheet' href='../static/result.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Copse&family=Shippori+Mincho:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div id='result' class='big-bg'>
-        <header class='page-header wrapper'>
-            <h1 class='logo'>ベジゼロ</h1>
+        <header class='page-header'>
+            <h1 class='logo'>
+                <a href='/'>
+                <img src='../static/S__44130316.jpg' width="70" height="30">
+                <!-- ベジゼロ -->
+                </a>
+            </h1>
             <nav>
                 <ul class='main-nav'>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
+                    <!-- <li><a href="/">Home</a></li> -->
+                    <li><a href="/#about">About</a></li>
                     <li><a href="/recipe">レシピ検索</a></li>
                     <li><a href="/word">取り組み紹介</a></li>
                 </ul>
             </nav>
         </header>
-        <div class='result-content wrapper'>
-            <h2 class='page-title'>おすすめレシピ</h2>
+        <div class='result-content page-title wrapper'>
+            <h2>おすすめレシピ</h2>
             <p>{{ food_name }}を使用した今週のおすすめレシピ3選</p>
         </div>
+
+        <div class="cp_breadcrumb">
+            <ul class="breadcrumbs">
+            <li><a href="/">Home</a></li>
+            <li><a href="/recipe">レシピ検索</a></li>
+            <li>おすすめレシピ</li>
+            </ul>
+        </div>
     </div>
-
-    <div class='wrapper grid'>
-        <div class='list'>
-            <figure>
-                <img src='{{ img_list[0] }}' style='height: 150px; width: 200px'>
-            </figure>
-            <li><a href='{{ url_list[0] }}'>{{ name_list[0] }}</a></li>
+    
+    <div class='result-main-content wrapper'>
+        <div class='number-label wrapper'>
+            <div class='number'>1</div>
+            <div class='number'>2</div>
+            <div class='number'>3</div>
         </div>
+        <div class='wrapper grid'>
+            <div class='list'>
+                <figure>
+                    <img src='{{ img_list[0] }}' style='height: 150px; width: 200px'>
+                </figure>
+                <li><a href='{{ url_list[0] }}'>{{ name_list[0] }}</a></li>
+            </div>
 
-        <div class='list'>
-            <figure>
-                <img src='{{ img_list[1] }}' style='height: 150px; width: 200px'>
-            </figure>
-            <li><a href='{{ url_list[1] }}'>{{ name_list[1] }}</a></li>
-        </div>
+            <div class='list'>
+                <figure>
+                    <img src='{{ img_list[1] }}' style='height: 150px; width: 200px'>
+                </figure>
+                <li><a href='{{ url_list[1] }}'>{{ name_list[1] }}</a></li>
+            </div>
 
-        <div class='list'>
-            <figure>
-                <img src='{{ img_list[2] }}' style='height: 150px; width: 200px'>
-            </figure>
-            <li><a href='{{ url_list[2] }}'>{{ name_list[2] }}</a></li>
+            <div class='list'>
+                <figure>
+                    <img src='{{ img_list[2] }}' style='height: 150px; width: 200px'>
+                </figure>
+                <li><a href='{{ url_list[2] }}'>{{ name_list[2] }}</a></li>
+            </div>
         </div>
     </div>
 
@@ -124,6 +147,7 @@
         </div>
     </div>
     <div class='return'>
+        <img src='../static/return2.png' width='13' height="10">
         <a href='/recipe'>他の野菜も試す</a>
     </div>
 
