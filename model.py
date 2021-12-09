@@ -7,14 +7,14 @@ from tensorflow.keras.optimizers import SGD
 import os
 os.environ['KMP_DUPLICATE_LIB_OK']='True'
 
-n_categories=5
+n_categories=13
 batch_size=32
 train_dir='vegetable_images/train'
 validation_dir='vegetable_images/validation'
 test_dir='vegetable_images/test'
 file_name='vgg16_vegetable_name'
 
-ClassNames=['キャベツ', 'ニンジン', 'レモン', 'タマネギ', 'カブ']
+ClassNames=[ 'リンゴ', 'ピーマン', 'ブロッコリー', 'キャベツ', 'ニンジン', 'ダイコン', 'レモン', 'タマネギ', 'ミカン', 'カボチャ', 'ホウレンソウ', 'カブ', 'スイカ']
 
 SAVE_DATA_DIR_PATH = './model'
 
@@ -68,9 +68,9 @@ validation_generator=validation_datagen.flow_from_directory(
     shuffle=True
 )
 
-#学習開始(バッチサイズ32, エポック10)
+#学習開始(バッチサイズ32, エポック70)
 hist=model.fit(x=train_generator,
-                epochs=30,
+                epochs=70,
                 verbose=1,
                 validation_data=validation_generator,
                 callbacks=[CSVLogger(file_name+'.csv')])

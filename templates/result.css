@@ -1,0 +1,648 @@
+@charset 'UTF-8';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 共通部分 */
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: serif;
+    line-height: 1.7;
+}
+
+img {
+    border: none;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* header */
+.logo {
+    display: flex;
+    width: 210px;
+    position: relative;
+}
+
+.logo a {
+    text-decoration: none;
+    color: rgb(70, 70, 70);
+}
+
+.main-nav {
+    display: flex;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    margin-top: 17px;
+    list-style: none;
+}
+
+.main-nav li {
+    margin-left: 36px;
+    position: relative;
+}
+
+.main-nav a {
+    color: rgb(122, 122, 122);
+    text-decoration: none;
+    position: relative;
+}
+
+.main-nav a::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    content: "";
+    width: 0%;
+    height: 1px;
+    background: rgb(109, 138, 94);
+    transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.main-nav a:hover::after {
+    width: 100%;
+}
+
+.main-nav a:hover {
+    color: black;
+}
+
+
+.page-header {
+    width: 100%;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    padding: 5px 10%;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.page-header-home {
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    padding: 5px 10%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+.page-title {
+    color: black;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: normal;
+    position: relative;
+    padding-top: 90px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Shippori Mincho B1', serif;
+}
+
+.page-title h2 {
+    font-weight: normal;
+}
+
+.page-title p {
+    font-size: 15px;
+    color: rgb(66, 66, 66);
+}
+
+.page-title::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -15px;/*線の上下位置*/
+    display: inline-block;
+    width: 50%;/*線の長さ*/
+    height: 2px;/*線の太さ*/
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);/*位置調整*/
+    background-color: black;/*線の色*/
+    border-radius: 1px;/*線の丸み*/
+}
+
+/* パンくずリスト */
+.cp_breadcrumb *, .cp_breadcrumb *:after, .cp_breadcrumb *:before {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.cp_breadcrumb {
+    max-width: 1100px;
+	margin: 1em auto;
+	padding: 1em 4%;
+	color: #fff;
+	border-radius: 0.5em;
+}
+.cp_breadcrumb a {
+	text-decoration: none;
+	color: rgb(201, 201, 201);
+}
+.cp_breadcrumb .breadcrumbs {
+	padding-left: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+}
+.cp_breadcrumb li {
+	display: inline-block;
+	position: relative;
+	padding-right: calc(16px + 8px);
+	margin-right: 8px;
+	color: rgb(201, 201, 201);
+}
+
+.cp_breadcrumb li::before {
+	content: '›';
+	width: 1em;
+	height: 1em;
+	line-height: 1;
+	text-align: center;
+	font-size: 1em;
+	color: inherit;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	-webkit-transform: translateY(-50%);
+	        transform: translateY(-50%);
+}
+.cp_breadcrumb li:last-child {
+	margin-right: 0;
+	padding-right: 0;
+	color: #ffffff;
+}
+.cp_breadcrumb li:last-child::before {
+	content: normal;
+}
+
+
+/* home */
+#home {
+    text-align: center;
+}
+
+#home .page-title {
+    color: white;
+    margin-bottom: 80px;
+    text-transform: none;
+    line-height: 120%;
+    text-shadow: 2px 2px 7px rgb(68, 68, 68);
+}
+
+.home-page-title {
+    color:white;
+    margin-top: 38vh;
+    text-transform: none;
+    line-height: 120%;
+    text-shadow: 2px 2px 7px rgb(68, 68, 68);
+    font-family: 'Shippori Mincho B1', serif;
+    font-weight: normal;
+    font-size: 50px;
+}
+
+.home-content {
+    background-image: url('./broccoli-gcbd123415_1920.jpg');
+    background-size: cover;
+    height: 100vh;
+    background-color: rgba(226, 255, 223, 0.3);
+    text-transform: uppercase;
+    font-weight: normal;
+    position: relative;
+    padding-top: 100px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Shippori Mincho B1', serif;
+}
+
+.home-content-text {
+    height: 40vh;
+    margin-top: 10%;
+}
+
+
+/* about */
+#about .page-title {
+    color: black;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: normal;
+    position: relative;
+    padding-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Shippori Mincho B1', serif;
+}
+
+.about-page {
+    background-color: beige;
+    padding-bottom: 60px;
+}
+
+
+.first-block {
+    display: flex;
+    align-items: center;
+    gap: 0 40px;
+    margin: 100px 0;
+}
+
+.first-block img {
+    margin-top: 50px;
+    width: 40%;
+    height: 40%;
+}
+
+.post-title {
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 50px;
+}
+
+.about-contents .post-title {
+    text-align: center
+}
+
+article {
+    margin-top: 80px;
+}
+
+.about-contents p {
+    margin-bottom: 33px;
+}
+
+h3 {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    font-size: 22px;
+}
+
+.btn01 a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 240px;
+    height: 40px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    background-color: black;
+    border: 1px solid transparent;
+}
+
+.btn01 a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 1px;
+    background-color: white;
+}
+   
+.btn01 a::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.btn01 a:hover {
+    background-color: black;
+    border: 1px solid white;
+}
+
+.btn01 a:hover::before {
+    background-color: black;
+}
+   
+.btn01 a:hover::after {
+    border: 1px solid black;
+}
+
+
+/* recipe */
+#recipe .page-title {
+    text-align: center;
+}
+
+.recipe-contents {
+    margin-bottom: 10%;
+}
+
+.recipe-contents h2 {
+    text-align: center;
+}
+
+.recipe-main-contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.recipe-main-contents h3 {
+    margin-bottom: 30px;
+    transform: scale(1.5, 1.5);
+    font-weight: normal;
+    padding-bottom: 30px;
+}
+
+.recipe-img-contents {
+    display: flex;
+    width: 33%;
+}
+
+.recipe-img-contents img {
+    margin-top: 20%;
+    margin-bottom: 30%;
+    margin-left: 5px;
+}
+
+/* フォーム */
+.custom-file {
+    margin-top: 10%;
+}
+
+.custom-file-submit {
+    margin-top: 10%;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(1.5, 1.5);
+}
+
+.filelabel {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
+    padding: 5px 9px;
+    font-weight: 300;
+    font-size: 12px;
+    border-radius: 1px;
+}
+
+.filelabel span {
+    width: 100%;
+    height: 40px;
+    background: rgb(8, 8, 8);
+    border: 1px solid rgb(255, 255, 255);
+    box-sizing: border-box;
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    transition-duration: 0.2s;
+   
+}
+
+.filelabel:hover {
+    box-shadow: none;
+    opacity: 0.5;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+    position: relative;
+    top: 2px;
+}
+
+.custom-file {
+    width: 270px;
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.custom-file p {
+    margin: 10px 0 0 15px;
+    font-weight: lighter;
+    font-size: 12px;
+    color: rgb(61, 61, 61);
+}
+
+#upload_file {
+    display: none;
+}
+
+#upload_file_submit {
+    display: none;
+}
+
+
+/* recipe-result */
+#result .page-title {
+    text-align: center;
+}
+
+.result-content p {
+    text-align: center;
+}
+
+
+.result-main-content {
+    background-color: beige;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.number-label {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.number {
+    text-align: center;
+    font-family: 'Copse', serif;
+    font-size: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 2%;
+    margin-bottom: 50px;
+}
+
+.list {
+    position: relative;
+    height: 270px;
+    width: 92%;
+    border-radius: 0px;
+    background: #FFF;
+    margin-left: auto;
+    margin-right: auto;
+    list-style: none;
+}
+
+figure {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+} 
+
+.list li {
+    margin: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.list a {
+    color: black;
+}
+
+.list a:hover {
+    text-decoration: none;
+}
+
+/* 栄養素 */
+.nutrition-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.nutrition-title {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 7%;
+    margin-bottom: 2%;
+}
+
+.nutrition {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 5%;
+}
+
+.nutrition-name {
+    display: block;
+    margin-bottom: 5%;
+}
+.nutrition-name span {
+    display: block;
+    margin-bottom: 1.5%;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.user-upload {
+    max-height: 300px;
+    max-width: 300px;
+    object-fit: contain;
+}
+
+.predict_name {
+    font-family: serif;
+} 
+
+
+.return {
+    margin: 70px auto;
+    width: 135px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
+    padding: 5px 9px;
+    font-weight: 300;
+    transform: scale(1.25, 1.25);
+}
+
+.return a {
+    margin: 0 auto;
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+}
+
+.return:hover {
+    box-shadow: none;
+    opacity: 0.5;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+    position: relative;
+    top: 2px;
+} 
+
+
+/* word */
+#word-result .page-title {
+    text-align: center;
+}
+
+#word-result p {
+    text-align: center;
+}
+
+.word {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+} 
+
+.word-container {
+    background-color: beige;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    margin-bottom: 50px;
+}
+
+.word-name span {
+    display: block;
+    text-align: center;
+    margin-bottom: 1.5%;
+    font-weight: bold;
+    font-size: 30px;
+} 
+
+.word-name img {
+    width: 90%;
+    height: 90%;
+    padding-left: 10%;
+}
+
+.word-text {
+    display: block;
+    margin: 70px auto;
+    text-align: center;    
+}
+
+.word .btn01 {
+    margin: 0 auto;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    background: rgb(35, 37, 36);
+    text-align: center;
+    padding: 26px 0;
+    }
+    
+small{
+    color: rgb(255, 255, 255);
+    } 

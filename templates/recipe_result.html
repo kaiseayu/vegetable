@@ -3,6 +3,7 @@
 <head>
     <title>ベジゼロ - おすすめレシピ</title>
     <meta charset="utf-8"/>
+    <link rel='icon' type="image/png" href="../static/favicon.png">
     <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
     <link rel='stylesheet' href='../static/result.css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,12 +17,10 @@
             <h1 class='logo'>
                 <a href='/'>
                 <img src='../static/S__44130316.jpg' width="70" height="30">
-                <!-- ベジゼロ -->
                 </a>
             </h1>
             <nav>
                 <ul class='main-nav'>
-                    <!-- <li><a href="/">Home</a></li> -->
                     <li><a href="/#about">About</a></li>
                     <li><a href="/recipe">レシピ検索</a></li>
                     <li><a href="/word">取り組み紹介</a></li>
@@ -91,6 +90,47 @@
                     塩分の摂り過ぎを調節する上で重要な栄養素です。
                 </p>
 
+                {% elif predict_name == 'リンゴ' %}
+                <p class='nutrition-name'>
+                    <span>ポリフェノール</span>
+                    リンゴの皮に含まれるポリフェノールは「リンゴポリフェノール」と呼ばれており、<br>
+                    強い抗酸化作用があります。<br>
+                    ビタミンCとともに活性酸素の働きを抑えて、老化抑制、がん予防などの効果があります。
+                </p>
+                <p class="nutrition-name">
+                    <span>食物繊維</span>
+                    水溶性食物繊維のペクチンが豊富に含まれています。<br>
+                    ペクチンは、血糖値や血中コレステロールの上昇を防いで糖尿病を予防したり、<br>
+                    便秘を改善して老廃物の排泄を促すなど、様々な硬貨があります。
+                </p>
+
+                {% elif predict_name == 'ピーマン' %}
+                <p class='nutrition-name'>
+                    <span>カリウム</span>
+                    体内のナトリウムを排出する作用があるため、<br>
+                    塩分の摂り過ぎを調節する上で重要な栄養素です。
+                </p>
+                <p class="nutrition-name">
+                    <span>ピラジン</span>
+                    ピラジンは血流を促進し、脳にリラックスして精神を安定させる働きがあります。<br>
+                    冷え性や肩こりの緩和、イライラや不安の解消、生活習慣病予防といった効果があると言われています。
+                </p>
+
+                {% elif predict_name == 'ダイコン' %}
+                <p class='nutrition-name'>
+                    <span>ビタミンC</span>
+                    骨や腱などの結合タンパク質であるコラーゲンの生成に必須の化合物です。<br>
+                    また、毛細血管・歯・軟骨などを正常に保つ働きがあるほか、<br>
+                    皮膚のメラニン色素の生成を抑え日焼けを防ぐ作用や、<br>
+                    ストレスやかぜなどの病気に対する抵抗力を強める働きがあります。<br>
+                </p>
+                <p class="nutrition-name">
+                    <span>ルチン</span>
+                    ビタミンPの一種です。<br>
+                    毛細血管を強化する働きがあり、<br>
+                    歯ぐきの出血を止める効果や動脈硬化・高血圧を改善する効果もあると言われています。
+                </p>
+
                 {% elif predict_name == 'タマネギ' %}
                 <p class='nutrition-name'>
                     <span>ケルセチン</span>
@@ -114,7 +154,46 @@
                     <span>ポリフェノール</span>
                     血中の脂質を減少させて動脈硬化を防止します。<br>
                     メタボリックシンドロームや生活習慣病と関わりの深い<br>
-                   血管疾患の予防につながるとされています。
+                    血管疾患の予防につながるとされています。
+                </p>
+
+                {% elif predict_name == 'ミカン' %}
+                <p class='nutrition-name'>
+                    <span>ケルセチン</span>
+                    普段私たちが食べている実の部分の30倍以上含まれています。<br>
+                    ポリフェノールの一種で、血流を改善する効果や動脈硬化を予防する効果などがあります。
+                </p>
+                <p class="nutrition-name">
+                    <span>ビタミンP</span>
+                    ビタミンCと一緒に働き、毛細血管の強化に努めます。<br>
+                    また、LDLコレステロールの減少や血行を良くする働きもあるため、<br>
+                    高血圧や中性脂肪の予防にもつながります。
+                </p>
+
+                {% elif predict_name == 'カボチャ' %}
+                <p class='nutrition-name'>
+                    <span>β-カロテン</span>
+                    実の部分の約2倍含まれています。<br>
+                    β-カロテンは体内でビタミンCに変換されます。<br>
+                    粘膜や皮膚、免疫機能を正常に保ったり、視力を維持するために必要不可欠な成分です。
+                </p>
+                <p class="nutrition-name">
+                    <span>食物繊維</span>
+                    不溶性のものと水溶性のものがありますが、カボチャのワタにはどちらも含まれています。<br>
+                    不溶性食物繊維は、水分を吸収して膨らみ腸を刺激し、便通を促します。<br>
+                    水溶性食物繊維は、糖質の吸収を緩やかにしたり、コレステロールの排出を促進したりする働きがあります。
+                </p>
+
+                {% elif predict_name == 'ホウレンソウ' %}
+                <p class='nutrition-name'>
+                    <span>マンガン</span>
+                    骨の発育に重要なミネラルであるほか、<br>
+                    糖脂質の代謝や運動機能、皮膚代謝などの多くの酵素反応に関与しています。
+                </p>
+                <p class="nutrition-name">
+                    <span>ベタシアニン</span>
+                    ポリフェノールの1種で、強力な抗酸化作用があります。<br>
+                    体内の活性酸素を除去する働きがあるため、美容やエイジング対策など様々な効果が期待されています。
                 </p>
 
                 {% elif predict_name == 'カブ' %}
@@ -130,7 +209,35 @@
                     水溶性食物繊維は、糖質の吸収を緩やかにしたり、コレステロールの排出を促進したりする働きがあります。
                 </p>
 
-                {% else %}
+                {% elif predict_name == 'ブロッコリー' %}
+                <p class='nutrition-name'>
+                    <span>β-カロテン</span>
+                    体内でビタミンCに変換されます。<br>
+                    粘膜や皮膚、免疫機能を正常に保ったり、視力を維持するために必要不可欠な成分です。
+                </p>
+                <p class='nutrition-name'>
+                    <span>ビタミンC</span>
+                    骨や腱などの結合タンパク質であるコラーゲンの生成に必須の化合物です。<br>
+                    また、毛細血管・歯・軟骨などを正常に保つ働きがあるほか、<br>
+                    皮膚のメラニン色素の生成を抑え日焼けを防ぐ作用や、<br>
+                    ストレスやかぜなどの病気に対する抵抗力を強める働きがあります。<br>
+                </p>
+
+                {% elif predict_name == 'スイカ' %}
+                <p class='nutrition-name'>
+                    <span>シトルリン</span>
+                    アミノ酸の一種です。果肉の約2倍含まれています。<br>
+                    栄養素を体に送り出す役割を果たし、<br>
+                    血管のしなやかさを保つ作用や血流の流れをよくしてくれる作用があります。<br>
+                    果物の中でもシトルリンが含まれているものは限られており、貴重な栄養素となっています。<br>
+                </p>
+                <p class="nutrition-name">
+                    <span>ビタミンA</span>
+                    ビタミンAの主要な成分であるレチノールには、<br>
+                    目や皮膚の粘膜を健康に保ったり、抵抗力を強めたりする働きがあります。
+                </p>
+
+                {% else %}　<!-- キャベツ -->
                 <p class='nutrition-name'>
                     <span>カルシウム</span>
                     骨や歯の主要な構成成分になるだけでなく、<br>

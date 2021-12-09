@@ -14,6 +14,14 @@ def GetRecipeURL(name):
       food_name = name + 'の芯'
     elif name == 'カブ':
       food_name = name + 'の葉'
+    elif name == 'ブロッコリー':
+      food_name = name + 'の茎'
+    elif name == 'ピーマン':
+      food_name = name + 'の種'
+    elif name == 'カボチャ':
+      food_name = name + 'のワタ'
+    elif name == 'ホウレンソウ':
+      food_name = name + 'の根'
     else:
       food_name = name + 'の皮'
 
